@@ -1,51 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-
-const plans = [
-  {
-    name: 'Foundation',
-    monthly: 49,
-    full: 199,
-    description: 'Perfect for self-paced learners starting their IELTS journey',
-    features: ['All 4 Module Access', 'AI Mock Tests (10/month)', 'Daily Practice Questions', 'Community Access', 'Study Materials PDF', 'Progress Tracking'],
-    cta: 'Get Started',
-    popular: false,
-  },
-  {
-    name: 'Professional',
-    monthly: 99,
-    full: 399,
-    description: 'Most popular — complete preparation with mentorship and live classes',
-    features: ['Everything in Foundation', 'Unlimited AI Mock Tests', 'Live Classes (3x/week)', 'Personal Mentor', 'Speaking Evaluation', 'Writing Review (10/month)', 'Doubt Solving Sessions', 'Score Prediction'],
-    cta: 'Start Free Trial',
-    popular: true,
-  },
-  {
-    name: 'Premium',
-    monthly: 199,
-    full: 699,
-    description: 'Intensive 1-on-1 coaching for guaranteed 7+ band score',
-    features: ['Everything in Professional', '1-on-1 Daily Sessions', 'Unlimited Writing Reviews', 'Exam Strategy Workshop', 'Visa Guidance', 'SOP Review', 'Priority Support 24/7', '7+ Band Guarantee*'],
-    cta: 'Book Consultation',
-    popular: false,
-  },
-];
 
 export default function PricingSection() {
-  const [yearly, setYearly] = useState(true);
-
   return (
-    <section id="pricing" className="section-padding-lg bg-surface relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-      <div className="container-premium relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />Simple Pricing
-          </span>
-          <h2 className="text-display-sm lg:text-display-md text-navy mb-6">Choose Your <span className="gradient-text">Success Plan</span></h2>
-          <p className="text-body-lg text-navy/60 max-w-2xl mx-auto mb-10">Invest in your future with transparent pricing. No hidden fees, no surprises.</p>
     <section id="pricing" className="section-padding bg-surface-200">
       <div className="container-premium">
         <div className="text-center max-w-3xl mx-auto mb-16">
