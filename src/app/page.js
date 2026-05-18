@@ -6,6 +6,7 @@ import ResultsSection from '@/components/ResultsSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import MobileAppFeature from '@/components/MobileAppFeature';
 import ScrollExperience from '@/components/ScrollExperience';
+import InstructorsSection from '@/components/InstructorsSection';
 import Testimonials from '@/components/Testimonials';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
@@ -25,6 +26,7 @@ export default function Home() {
       <CourseShowcase />
       <ScrollExperience />
       <ResultsSection />
+      <InstructorsSection />
       <Testimonials />
       <PricingSection />
       <FAQSection />

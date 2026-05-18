@@ -33,53 +33,44 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-glass-sm border border-surface-200 mb-8"
             >
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-surface-200 overflow-hidden relative">
-                    <Image src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'women' : 'men'}/${i + 20}.jpg`} alt="Student" fill className="object-cover" unoptimized />
-                  </div>
-                ))}
-              </div>
+              <span className="flex h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse"></span>
               <span className="text-sm font-semibold text-navy/80 pl-2">
-                Join <span className="text-primary-dark">5M+</span> test takers worldwide
+                Limited Seats Available <span className="text-primary-dark">(Max 4 Students)</span>
               </span>
             </motion.div>
 
             <h1 className="text-display-md lg:text-display-lg font-extrabold text-navy leading-[1.1] mb-6 tracking-tight">
-              The #1 Global <br className="hidden lg:block" />
-              <span className="gradient-text">IELTS Online</span> <br className="hidden lg:block" />
-              Study Platform.
+              <span className="gradient-text">IELTS.my</span> <br className="hidden lg:block" />
+              Your Gateway to <br className="hidden lg:block" />
+              Global Success.
             </h1>
             
             <p className="text-body-lg text-navy-light mb-10 max-w-2xl mx-auto lg:mx-0">
-              Prepare for the real exam with our <strong className="text-navy">Free IELTS Practice Tests</strong>. Get instant AI examiner evaluations for Writing and Speaking, and achieve your target band score faster.
+              Join our 30-Days Intensive Program. We guarantee a <strong className="text-navy">6 Band Score in IELTS – Or Get Your Money Back!</strong> Expert trainers, latest practice material, and personal guidance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <a href="#book-demo" id="hero-cta-demo" className="btn-primary !text-lg group">
-                <span>Start Free Mock Test</span>
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <a href="#book-demo" id="hero-cta-demo" className="btn-primary !text-lg group flex items-center justify-center gap-2">
+                <span>Enroll Now for €490</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
-              <a href="#courses" className="btn-outline !text-lg bg-white">
-                Explore Live Lessons
               </a>
             </div>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 border-t border-surface-200 pt-8">
               <div>
-                <p className="text-3xl font-bold text-navy">120+</p>
-                <p className="text-sm text-navy-light mt-1 font-medium">Free Mock Tests</p>
+                <p className="text-3xl font-bold text-navy">30</p>
+                <p className="text-sm text-navy-light mt-1 font-medium">Days Program</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-navy">AI</p>
-                <p className="text-sm text-navy-light mt-1 font-medium">Instant Scoring</p>
+                <p className="text-3xl font-bold text-navy">4</p>
+                <p className="text-sm text-navy-light mt-1 font-medium">Max Students</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-navy">120+</p>
-                <p className="text-sm text-navy-light mt-1 font-medium">Countries</p>
+                <p className="text-3xl font-bold text-navy">100%</p>
+                <p className="text-sm text-navy-light mt-1 font-medium">Money Back</p>
               </div>
             </div>
           </motion.div>
@@ -111,11 +102,11 @@ export default function HeroSection() {
                 </div>
                 <div className="flex justify-between items-end mb-6">
                    <div>
-                     <h3 className="text-2xl font-bold text-navy mb-2">IELTS Academic</h3>
+                     <h3 className="text-2xl font-bold text-navy mb-2">IELTS.my Program</h3>
                      <p className="text-navy-light">Listening • Reading • Writing • Speaking</p>
                    </div>
                    <div className="w-16 h-16 rounded-full border-4 border-primary flex items-center justify-center font-bold text-navy">
-                     8.0
+                     6.0+
                    </div>
                 </div>
                 <div className="space-y-3">
@@ -137,8 +128,8 @@ export default function HeroSection() {
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <div>
-                <p className="text-sm font-bold text-navy">AI Evaluated</p>
-                <p className="text-xs text-navy-light">Instant Feedback</p>
+                <p className="text-sm font-bold text-navy">6 Band Guaranteed</p>
+                <p className="text-xs text-navy-light">Or Money Back</p>
               </div>
             </motion.div>
 
@@ -147,12 +138,8 @@ export default function HeroSection() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -right-4 bottom-1/4 bg-navy p-4 rounded-2xl shadow-premium z-20"
             >
-              <p className="text-white text-sm font-semibold mb-1">Target Band</p>
-              <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                ))}
-              </div>
+              <p className="text-white text-sm font-semibold mb-1">Price</p>
+              <p className="text-primary text-2xl font-bold">€490</p>
             </motion.div>
 
           </motion.div>
