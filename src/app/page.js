@@ -1,8 +1,10 @@
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
+import UniversityMarquee from '@/components/UniversityMarquee';
 import CourseShowcase from '@/components/CourseShowcase';
 import ResultsSection from '@/components/ResultsSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import MobileAppFeature from '@/components/MobileAppFeature';
 import ScrollExperience from '@/components/ScrollExperience';
 import Testimonials from '@/components/Testimonials';
 import PricingSection from '@/components/PricingSection';
@@ -17,10 +19,12 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroSection />
-      <CourseShowcase />
-      <ResultsSection />
+      <UniversityMarquee />
       <FeaturesSection />
+      <MobileAppFeature />
+      <CourseShowcase />
       <ScrollExperience />
+      <ResultsSection />
       <Testimonials />
       <PricingSection />
       <FAQSection />
