@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS Custom Properties ===== */
+:root {
+  --primary: #0A66FF;
+  --primary-dark: #0052CC;
+  --accent-yellow: #FFC72C;
+  --accent-orange: #FF7A00;
+  --navy: #0B1D3A;
+  --navy-light: #162D54;
+  --surface: #F8FAFC;
+  --surface-200: #F1F5F9;
+  --surface-300: #E2E8F0;
+  --white: #FFFFFF;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-glass-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--navy);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(10, 102, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(10, 102, 255, 0.5);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(10, 102, 255, 0.15);
+  color: var(--navy);
+}
+
+/* ===== Glassmorphism ===== */
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-dark {
+    background: rgba(11, 29, 58, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s var(--ease-apple);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  /* ===== Button Styles ===== */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-2xl transition-all duration-300;
+    background: linear-gradient(135deg, #0A66FF 0%, #0052CC 100%);
+    box-shadow: 0 4px 16px rgba(10, 102, 255, 0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 32px rgba(10, 102, 255, 0.45);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-semibold rounded-2xl transition-all duration-300;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 font-semibold rounded-2xl transition-all duration-300;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(10, 102, 255, 0.3);
+  }
+
+  /* ===== Gradient Text ===== */
+  .gradient-text {
+    background: linear-gradient(135deg, #0A66FF 0%, #0052CC 50%, #FF7A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-hero {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E6F0FF 50%, #FFC72C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ===== Section Styles ===== */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32;
+  }
+
+  .section-padding-lg {
+    @apply px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40;
+  }
+
+  .container-premium {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* ===== Animated Background Blobs ===== */
+.blob-1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10, 102, 255, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: blob 7s infinite;
+}
+
+.blob-2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 199, 44, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: blob 7s infinite 2s;
+}
+
+.blob-3 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 0, 0.1) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: blob 7s infinite 4s;
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* ===== Gradient Border ===== */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(10, 102, 255, 0.4), rgba(255, 199, 44, 0.4), rgba(255, 122, 0, 0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ===== Noise Texture Overlay ===== */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===== Animated Gradient Background ===== */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0B1D3A, #0A66FF, #0052CC, #162D54);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== Counter Animation ===== */
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter-animate {
+  transition: --num 2s ease-out;
+  counter-reset: num var(--num);
+}
+
+.counter-animate::after {
+  content: counter(num);
+}
+
+/* ===== Smooth Image Loading ===== */
+img {
+  transition: opacity 0.3s var(--ease-apple);
+}
+
+/* ===== Focus Styles ===== */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
