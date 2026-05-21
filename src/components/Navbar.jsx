@@ -51,9 +51,9 @@ export default function Navbar() {
               <Image 
                 src="/logo.png" 
                 alt="IELTS.my — International English Language Training Specialists" 
-                width={220} 
-                height={55} 
-                className="h-14 sm:h-16 w-auto object-contain"
+                width={280} 
+                height={70} 
+                className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-14' : 'h-[4.5rem]'}`}
                 priority
                 style={{ 
                   mixBlendMode: scrolled ? 'multiply' : 'screen',
