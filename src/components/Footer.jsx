@@ -25,16 +25,17 @@ export default function Footer() {
           <div className="grid lg:grid-cols-5 gap-12 mb-16">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <Image 
-                  src="/logo.png" 
-                  alt="IELTS.my — International English Language Training Specialists" 
-                  width={160} 
-                  height={40} 
-                  className="h-10 w-auto object-contain brightness-0 invert" 
-                />
+              <div className="mb-6">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-600 to-yellow-600 flex items-center justify-center shadow-md">
+                    <span className="text-white text-lg">🌍</span>
+                  </div>
+                  <span className="text-2xl font-extrabold text-white tracking-tight">
+                    IELTS<span className="text-amber-400">.my</span>
+                  </span>
+                </div>
               </div>
-              <p className="text-white/50 text-sm leading-relaxed mb-2 max-w-sm font-medium tracking-wide">
+              <p className="text-amber-400/60 text-sm leading-relaxed mb-2 max-w-sm font-semibold tracking-wide uppercase" style={{ fontSize: '11px', letterSpacing: '0.15em' }}>
                 International English Language Training Specialists
               </p>
               <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-sm">
