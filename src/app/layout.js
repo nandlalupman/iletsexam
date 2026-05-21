@@ -9,33 +9,35 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "IELTS Pro Academy — Crack IELTS & Score 7+ Bands | Live Classes & AI Mock Tests",
+  title: "IELTS.my — International English Language Training Specialists | 30-Day Intensive Program",
   description:
-    "Join 10,000+ successful students. Expert IELTS coaching with live classes, AI-powered mock tests, personal mentorship, and speaking evaluation. Score 7+ bands guaranteed.",
+    "IELTS.my — Your Gateway to Global Success. Join our 30-day intensive IELTS program with expert trainers Divya & Daksh Lavania. 6 Band Guaranteed or Money Back. Max 4 students per batch. €490 only.",
   keywords: [
     "IELTS preparation",
     "IELTS online course",
-    "IELTS 7+ bands",
+    "IELTS 6+ bands",
     "IELTS coaching",
     "IELTS mock test",
     "IELTS speaking",
     "IELTS writing",
     "IELTS reading",
     "IELTS listening",
+    "IELTS.my",
+    "International English Language Training Specialists",
   ],
   openGraph: {
-    title: "IELTS Pro Academy — Crack IELTS & Score 7+ Bands",
+    title: "IELTS.my — International English Language Training Specialists",
     description:
-      "Expert IELTS coaching with live classes, AI mock tests, and personal mentorship. Join 10,000+ successful students.",
+      "30-day intensive IELTS program with expert trainers. 6 Band Guaranteed or Money Back. Max 4 students per batch.",
     type: "website",
     locale: "en_US",
-    siteName: "IELTS Pro Academy",
+    siteName: "IELTS.my",
   },
   twitter: {
     card: "summary_large_image",
-    title: "IELTS Pro Academy — Score 7+ Bands",
+    title: "IELTS.my — International English Language Training Specialists",
     description:
-      "Live classes, AI mock tests, and expert mentorship for IELTS success.",
+      "30-day intensive IELTS program. 6 Band Guaranteed or Money Back. Expert trainers, max 4 students.",
   },
   robots: {
     index: true,

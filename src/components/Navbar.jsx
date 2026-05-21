@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const navLinks = [
   { name: 'Courses', href: '#courses' },
@@ -47,12 +48,14 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href="#" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-700 flex items-center justify-center shadow-glow-blue/30 group-hover:shadow-glow-blue transition-shadow duration-300">
-                <span className="text-white font-bold text-lg">I</span>
-              </div>
-              <span className={`text-xl font-bold transition-colors duration-300 ${scrolled ? 'text-navy' : 'text-white'}`}>
-                IELTS<span className="text-primary">Pro</span>
-              </span>
+              <Image 
+                src="/logo.png" 
+                alt="IELTS.my — International English Language Training Specialists" 
+                width={160} 
+                height={40} 
+                className="h-10 w-auto object-contain" 
+                priority
+              />
             </a>
 
             {/* Desktop Links */}

@@ -8,15 +8,13 @@ const instructors = [
     name: 'Divya Lavania',
     role: 'Lead IELTS Trainer',
     description: 'Expert trainer with years of experience in helping students achieve their target band scores. Specializes in Writing and Speaking modules.',
-    // User: Please replace these placeholder paths with the actual paths of the images you uploaded. 
-    // Save your images in the `public` folder as `divya.jpg` and `daksh.jpg`
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600', 
+    image: '/divya.png', 
   },
   {
     name: 'Daksh Lavania',
     role: 'Senior IELTS Coach',
     description: 'Dedicated coach focusing on Reading and Listening strategies. Known for personalized feedback and fast-track success plans.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600',
+    image: '/daksh.jpg',
   }
 ];
 

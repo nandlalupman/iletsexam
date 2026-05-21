@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const footerLinks = {
   'Courses': ['IELTS Reading', 'IELTS Writing', 'IELTS Listening', 'IELTS Speaking', 'Full Course Bundle'],
   'Resources': ['AI Mock Tests', 'Practice Questions', 'Study Materials', 'Blog', 'Free Webinars'],
@@ -24,13 +26,19 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-700 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">I</span>
-                </div>
-                <span className="text-xl font-bold text-white">IELTS<span className="text-primary-300">Pro</span></span>
+                <Image 
+                  src="/logo.png" 
+                  alt="IELTS.my — International English Language Training Specialists" 
+                  width={160} 
+                  height={40} 
+                  className="h-10 w-auto object-contain brightness-0 invert" 
+                />
               </div>
-              <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-sm">
-                India&apos;s most trusted IELTS preparation platform. Join 10,000+ students who achieved their dream scores with our expert-led courses.
+              <p className="text-white/50 text-sm leading-relaxed mb-2 max-w-sm font-medium tracking-wide">
+                International English Language Training Specialists
+              </p>
+              <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-sm">
+                Your Gateway to Global Success. Join our 30-day intensive IELTS program with expert trainers. 6 Band Guaranteed or Money Back.
               </p>
               <div className="flex gap-3">
                 {socials.map((s) => (
