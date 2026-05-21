@@ -25,19 +25,16 @@ export default function Footer() {
           <div className="grid lg:grid-cols-5 gap-12 mb-16">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <div className="mb-6">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-600 to-yellow-600 flex items-center justify-center shadow-md">
-                    <span className="text-white text-lg">🌍</span>
-                  </div>
-                  <span className="text-2xl font-extrabold text-white tracking-tight">
-                    IELTS<span className="text-amber-400">.my</span>
-                  </span>
-                </div>
+              <div className="mb-5">
+                <Image 
+                  src="/logo.png" 
+                  alt="IELTS.my — International English Language Training Specialists" 
+                  width={200} 
+                  height={50} 
+                  className="h-14 w-auto object-contain" 
+                  style={{ mixBlendMode: 'screen' }}
+                />
               </div>
-              <p className="text-amber-400/60 text-sm leading-relaxed mb-2 max-w-sm font-semibold tracking-wide uppercase" style={{ fontSize: '11px', letterSpacing: '0.15em' }}>
-                International English Language Training Specialists
-              </p>
               <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-sm">
                 Your Gateway to Global Success. Join our 30-day intensive IELTS program with expert trainers. 6 Band Guaranteed or Money Back.
               </p>

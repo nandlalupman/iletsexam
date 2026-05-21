@@ -19,7 +19,7 @@ export default function HeroSection() {
       {/* Subtle Grid Overlay */}
       <div className="absolute inset-0 z-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
-      <div className="container-premium relative z-10 pt-28 pb-16 lg:pt-32 lg:pb-24">
+      <div className="container-premium relative z-10 pt-36 pb-16 lg:pt-40 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Text Content */}
@@ -61,20 +61,20 @@ export default function HeroSection() {
               <span className="text-white/90">Or Money Back!</span>
             </h1>
 
-            {/* Price Badge */}
+            {/* Price Badge — highly visible */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="inline-flex items-center gap-3 mb-8"
+              className="inline-flex items-center gap-4 mb-8"
             >
-              <div className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-accent-yellow/20 to-accent-orange/20 border border-accent-yellow/30 backdrop-blur-sm">
-                <span className="text-3xl sm:text-4xl font-black text-accent-yellow">€490</span>
-                <span className="text-white/60 text-sm ml-2">only</span>
+              <div className="px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-400 shadow-lg shadow-amber-500/30">
+                <span className="text-4xl sm:text-5xl font-black text-navy">€490</span>
+                <span className="text-navy/70 text-base font-bold ml-2">ONLY</span>
               </div>
               <div className="text-left">
-                <p className="text-white/50 text-xs line-through">€990</p>
-                <p className="text-green-400 text-sm font-bold">50% OFF</p>
+                <p className="text-white/60 text-sm line-through">€990</p>
+                <p className="text-green-400 text-base font-bold">50% OFF</p>
               </div>
             </motion.div>
 

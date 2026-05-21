@@ -41,33 +41,24 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? 'py-2 bg-white/95 backdrop-blur-2xl shadow-lg border-b border-gray-100'
-            : 'py-4 bg-transparent'
+            : 'py-3 bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo — Text-based for crisp rendering */}
-            <a href="#" className="flex items-center gap-2.5 group">
-              {/* Globe Icon */}
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                scrolled 
-                  ? 'bg-gradient-to-br from-amber-600 to-yellow-600 shadow-md' 
-                  : 'bg-gradient-to-br from-amber-500/90 to-yellow-500/90 shadow-lg shadow-amber-500/20'
-              }`}>
-                <span className="text-white text-lg">🌍</span>
-              </div>
-              <div className="flex flex-col">
-                <span className={`text-xl font-extrabold tracking-tight leading-none transition-colors duration-300 ${
-                  scrolled ? 'text-gray-900' : 'text-white'
-                }`}>
-                  IELTS<span className={`transition-colors duration-300 ${scrolled ? 'text-amber-600' : 'text-amber-400'}`}>.my</span>
-                </span>
-                <span className={`text-[9px] font-medium tracking-[0.08em] uppercase leading-none mt-0.5 transition-colors duration-300 ${
-                  scrolled ? 'text-gray-400' : 'text-white/50'
-                }`}>
-                  Training Specialists
-                </span>
-              </div>
+            {/* Logo — Real IELTS.my image */}
+            <a href="#" className="flex items-center group">
+              <Image 
+                src="/logo.png" 
+                alt="IELTS.my — International English Language Training Specialists" 
+                width={220} 
+                height={55} 
+                className="h-14 sm:h-16 w-auto object-contain"
+                priority
+                style={{ 
+                  mixBlendMode: scrolled ? 'multiply' : 'screen',
+                }}
+              />
             </a>
 
             {/* Desktop Links */}
@@ -79,7 +70,7 @@ export default function Navbar() {
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                     scrolled
                       ? 'text-gray-500 hover:text-gray-900 hover:bg-gray-100'
-                      : 'text-white/75 hover:text-white hover:bg-white/10'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {link.name}
@@ -159,6 +150,17 @@ export default function Navbar() {
               className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl"
             >
               <div className="pt-24 px-6 pb-8 flex flex-col h-full">
+                {/* Logo in mobile menu */}
+                <div className="mb-6 px-4">
+                  <Image 
+                    src="/logo.png" 
+                    alt="IELTS.my" 
+                    width={160} 
+                    height={40} 
+                    className="h-10 w-auto object-contain"
+                    style={{ mixBlendMode: 'multiply' }}
+                  />
+                </div>
                 <div className="flex-1 flex flex-col gap-1">
                   {navLinks.map((link, i) => (
                     <motion.a
