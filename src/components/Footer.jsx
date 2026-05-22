@@ -62,16 +62,44 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Contact Row */}
-          <div className="flex flex-wrap items-center gap-6 py-8 border-t border-white/10 mb-8">
-            <a href="mailto:ielts@ielts.my" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-              ielts@ielts.my
-            </a>
-            <a href="tel:+393513214649" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              +39 351 321 4649
-            </a>
+          {/* Office Addresses */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 border-t border-white/10 mb-8">
+            {/* India Office */}
+            <div>
+              <h4 className="text-sm font-semibold text-amber-400 mb-3 uppercase tracking-wider flex items-center gap-2">
+                <span>🇮🇳</span> India Office
+              </h4>
+              <p className="text-sm text-white/40 leading-relaxed">
+                4th Floor SR Bharath Apartments<br />
+                3rd Main Road, HAL 3rd Stage<br />
+                Bengaluru - 560075
+              </p>
+            </div>
+            {/* Italy Office */}
+            <div>
+              <h4 className="text-sm font-semibold text-amber-400 mb-3 uppercase tracking-wider flex items-center gap-2">
+                <span>🇮🇹</span> Italy Office
+              </h4>
+              <p className="text-sm text-white/40 leading-relaxed">
+                Via Arenaccia, 29<br />
+                80141 Napoli NA<br />
+                Italy
+              </p>
+            </div>
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-sm font-semibold text-amber-400 mb-3 uppercase tracking-wider flex items-center gap-2">
+                <span>📞</span> Contact Us
+              </h4>
+              <div className="flex flex-col gap-2">
+                <a href="tel:+919509698089" className="text-sm text-white/40 hover:text-white transition-colors">
+                  +91 95096 98089
+                </a>
+                <a href="mailto:ielts@ielts.my" className="text-sm text-white/40 hover:text-white transition-colors">
+                  ielts@ielts.my
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Bottom */}
